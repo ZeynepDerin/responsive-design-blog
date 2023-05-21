@@ -1,0 +1,295 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header{
+    padding: 1em;
+}
+
+header,
+.aboutme-container,
+.post{
+ margin-left: 30px;
+ margin-right: 30px;
+}
+
+main{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+header,
+.iconandtitle,
+.headernavbuttons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+}
+
+.icon {
+    width: 0.9em;
+}
+
+.btn-header {
+    background: none;
+    border: none;
+    
+}
+
+.facepic img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+   
+}
+
+
+section {
+    padding: 1em;
+}
+
+
+.aboutme-container {
+    padding: 1em;
+}
+
+.my-cv {
+  
+  margin: 0;
+  
+}
+
+.group{
+    width: 100%;
+    padding: 0.1em;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.group img {
+    margin-top: 30px;
+}
+
+img{
+    width: 100%;
+}
+
+.viewmore {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: none;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    height: 50px;
+    
+}
+
+footer p {
+   margin: 0 ;
+}
+
+/*///////////*/
+/* TYPO */
+/*//////////*/
+
+
+
+h4{
+    font-size: 1rem;
+    color: #0E0E0E;
+}
+
+.btn-header {
+    font-size: 1rem;
+    color: #090909;
+}
+
+.aboutme-container{
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+.post{
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.greeting {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.post {
+    padding: 2em 1em 3em 1em;
+}
+
+h5 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.5rem;
+    color:#202020;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.title-main{
+    font-size: 1.9rem;
+}
+
+main p {
+    font-size: 1rem;
+    color: #505050;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+main h1{
+    font-size: 1.3rem;
+    color: #141414;
+    margin: 0;
+}
+
+.date {
+    color: #000000;
+}
+
+.viewmore {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #505050;
+    padding-bottom: 2em;
+}
+
+footer {
+    color: #ECECEC;
+    font-size: 0.7rem;
+}
+.copyright {
+    color: #D7D7D7;
+}
+
+/* MEDIA QUERY */
+
+
+@media (min-width:1024px) {
+
+    main {
+        display: grid;
+        grid-template: 1fr 1fr / repeat(auto-fit, minmax(250px, 1fr));
+        gap:1.5em;
+        margin: 0 30px;
+
+    }
+    
+    main img{
+        height:50%;
+    }
+    
+    .aboutme-container{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 10px 4fr;
+        grid-template-areas: 
+        " pic . greeting"
+        "pic . cv";
+
+    }
+  
+
+    .aboutme-container::after{
+        content: "welcome";
+        font-size: 10rem;
+        text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
+        opacity: 0.05;
+        position: absolute;
+        left: 25%;
+    
+    }
+
+    .greeting{
+        margin-left:30px;
+        margin-right:100px;
+        grid-area: greeting;
+    }
+
+    .my-cv{
+        grid-area: cv;
+        margin-left:30px;
+        margin-right:100px;
+        margin-top: -15px;
+        align-self: start;
+    }
+
+    .facepic{
+        margin-left: 50px;
+        margin-bottom: 15px;
+        align-self: center;
+        grid-area: pic;  
+    }
+
+    
+}
+@media (min-width: 768px) and (max-width:1023px){
+   
+    .facepic::after{
+        content: "welcome";
+        font-size: 8.5rem;
+        text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
+        opacity: 0.05;
+        position: absolute;
+        left: 27%;
+        top: 80px;
+    }
+
+    main {
+        display: grid;
+        grid-template: 1fr 1fr / repeat(auto-fit, minmax(320px, 1fr));
+        gap:1.5em;
+        margin: 0 30px;
+
+    }
+
+    .group img{
+        height: 50%;
+    }
+ 
+    
+}
+
+@media (max-width:767px){
+
+    
+    .facepic::after{
+        content: "welcome";
+        font-size: 7rem;
+        text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
+        opacity: 0.05;
+        position: absolute;
+        left: 33%;
+        top: 90px;
+    }
+
+    
+}
+
